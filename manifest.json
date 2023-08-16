@@ -1,0 +1,33 @@
+{
+  "name": "tarot",
+  "title": "Tarot",
+  "description": "Let moe provide you with a tarot reading.",
+  "authors": [
+    {
+      "name": "tcm",
+      "email": "support@webaverse.com",
+      "url": "https://www.moemate.io"
+    },
+    {
+      "name": "tcm"
+    }
+  ],
+  "version": "1.0",
+  "compatibility": {
+    "minimum": "0.9.1",
+    "verified": "0.9.1"
+  },
+  "models": [
+    "models/get_character_api.json.hbs"
+  ],
+  "skills": [
+    "skills/read_tarot.json.hbs",
+    "skills/create_tarot.json.hbs"
+  ],
+  "scripts": [
+    "scripts/tarot.js"
+  ],
+  "components": [
+    "components/CardSelector.jsx"
+  ]
+}
