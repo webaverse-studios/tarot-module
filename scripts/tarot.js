@@ -49,8 +49,11 @@ async function _handleCardSelectorFinish(data) {
     await initiateLlm();
 
     const name = window.companion.GetCharacterAttribute('name');
-    window.hooks.emit('moemate_core:handle_skill_text', {name: '@user', value: 'The selected card is: ' + data.cardName});
-    window.companion.SendMessage({ type: "WEB_IMAGE", user: name, value: data.cardImage, timestamp: Date.now()});
+    const reply = `The selected cards are: ${data.cardNames[0]}, ${data.cardNames[1]}, and ${data.cardNames[2]}`;
+    window.hooks.emit('moemate_core:handle_skill_text', {name: '@user', value: reply});
+    window.companion.SendMessage({ type: "WEB_IMAGE", user: name, value: data.cardImages[0], timestamp: Date.now()});
+    window.companion.SendMessage({ type: "WEB_IMAGE", user: name, value: data.cardImages[1], timestamp: Date.now()});
+    window.companion.SendMessage({ type: "WEB_IMAGE", user: name, value: data.cardImages[2], timestamp: Date.now()});
     window.hooks.emit('moemate_core:handle_skill_text', {name: name, value: 'What specific question would you like to explore through the Tarot cards today?'});
     setTimeout(async () => {
         await window.companion.WaitForTurn(async () => { // force the companion to not talk
