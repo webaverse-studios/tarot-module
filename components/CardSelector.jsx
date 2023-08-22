@@ -128,7 +128,7 @@ const Card = ({ index, card, onClick, selectedCards}) => {
     transform: isSelected && finishCardSelect ? 'rotateY(0deg)' : 'rotateY(180deg)',
     transition: 'all 0.5s ease',
 
-    backgroundImage: `url(${isSelected && finishCardSelect ? card.image : 'https://m.media-amazon.com/images/I/51LhKlEtAmL._SX331_BO1,204,203,200_.jpg'})`,
+    backgroundImage: `url(${isSelected && finishCardSelect ? card.image : 'https://tcm390.github.io/tarot-image/back.jpg'})`,
     backgroundSize: '100% 100%',
     backgroundPosition: 'center',
   };
