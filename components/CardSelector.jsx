@@ -109,7 +109,7 @@ const Card = ({ index, card, onClick, selectedCards}) => {
     height: isSelected && finishCardSelect ? '450px' : '150px',
     margin: isSelected && finishCardSelect ? '0 auto' : '-30px',
     borderRadius: '10px',
-    display: 'flex',
+    display: !finishCardSelect ? 'flex' : (isSelected ? 'flex' : 'none'),
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
