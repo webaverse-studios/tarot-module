@@ -17,7 +17,7 @@
     "minimum": "0.9.1",
     "verified": "0.9.1"
   },
-  "download": "https://github.com/webaverse-studios/tarot-module/releases/download/v1.0.1/tarot-v1.0.1.zip",
+  "download": "https://github.com/webaverse-studios/tarot-module/releases/download/V1.0.1/tarot-v1.0.1.zip",
   "models": [
     "models/get_character_api.json.hbs"
   ],
